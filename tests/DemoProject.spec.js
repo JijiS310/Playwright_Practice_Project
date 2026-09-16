@@ -83,5 +83,7 @@ myTest.skip('SampleCustom', async ({page,userDetail}) => {
 
 customLocators('LocatorCustom',async ({page,loginFunction})=> {
     await loginFunction('standard_user','secret_sauce')
+
+    
 })
 
