@@ -47,7 +47,7 @@ test('hover', async ({page})=>{
     await page.locator('#others').click()
 
     await page.getByRole('link',{name:'Chart Demo'}).click()
-    await page.pause()
+   // await page.pause()
 
     await page.locator('#barChart').hover()
 

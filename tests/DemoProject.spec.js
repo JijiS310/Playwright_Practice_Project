@@ -3,7 +3,7 @@ import {customTest} from "../utils/CustomData.js"
 import {myTest} from "../utils/CustomFunction.js"
 import {customLocators} from  "../utils/CustomTypesTest.js"
 
-test.skip('DemoProject', async ({page}) => {
+test('DemoProject', async ({page}) => {
 await page.goto('https://www.saucedemo.com')
 
 const userName = await page.locator('#user-name').fill('standard_user')
@@ -61,7 +61,7 @@ await expect(confirmMsg).toContain('Thank you')
 
 const users = ["loginData1","loginData2"]
 
-customTest.skip('SampleCustomTest', async ({page,loginData1}) => {
+customTest('SampleCustomTest', async ({page,loginData1}) => {
     
     await page.goto('https://www.saucedemo.com')
 
@@ -71,7 +71,7 @@ customTest.skip('SampleCustomTest', async ({page,loginData1}) => {
     
 })
 
-myTest.skip('SampleCustom', async ({page,userDetail}) => {
+myTest('SampleCustom', async ({page,userDetail}) => {
  for(const user of userDetail){
     await page.goto('https://www.saucedemo.com')
 

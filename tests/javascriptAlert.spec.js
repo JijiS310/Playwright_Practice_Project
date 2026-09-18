@@ -41,7 +41,7 @@ test('javascriptAlert',async ({page})=>{
         await dialog.accept('Hello')
     })
     await clickPrompt.click()
-    await page.pause()
+   // await page.pause()
     //task for 14/08/2026
     const promoptmsg = await page.locator('#prompt-demo')
     const promptmsgtext = await promoptmsg.textContent()
