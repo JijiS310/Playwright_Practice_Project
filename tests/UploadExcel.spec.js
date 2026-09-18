@@ -7,7 +7,7 @@ test ('UploadFile', async ({page})=>{
 
 })
 
-test.only('DownloadFile', async ({page})=> {
+test('DownloadFile', async ({page})=> {
     await page.goto("https://demoqa.com/upload-download")
     //before download we need to add below promise
     const downloadPromise = page.waitForEvent('download')
