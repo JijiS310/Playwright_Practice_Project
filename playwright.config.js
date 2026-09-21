@@ -41,28 +41,28 @@ export default defineConfig({
     trace:'retain-on-failure'
   },
   },
-// {
-//   name:'firefoxProject', //ourchoice name
-//     use: {
-//       browserName:'firefox',
-//     headless: false,
-//     screenshot:'only-on-failure',
-//     video:'retain-on-failure',
-//     trace:'retain-on-failure'
-// }
-// },
-// {
+{
+  name:'firefoxProject', //ourchoice name
+    use: {
+      browserName:'firefox',
+    headless: false,
+    screenshot:'only-on-failure',
+    video:'retain-on-failure',
+    trace:'retain-on-failure'
+}
+},
+{
   
-//     name:'webkit',
-//     use: {
-//       browserName:'webkit',
-//     headless: false,
-//     screenshot:'only-on-failure',
-//     video:'retain-on-failure',
-//     trace:'retain-on-failure'
+    name:'webkit',
+    use: {
+      browserName:'webkit',
+    headless: false,
+    screenshot:'only-on-failure',
+    video:'retain-on-failure',
+    trace:'retain-on-failure'
   
-// }
-// }
+}
+}
 ]
 
   /* Run your local dev server before starting the tests */

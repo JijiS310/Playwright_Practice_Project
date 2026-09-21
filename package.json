@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "headed": "npx playwright test --headed",
+    "ui": "npx playwright test --ui",
+    "config": "npx playwright test --config=playwright.config1.ts",
+    "chromeProject": "npx playwright test --project=chromium",
+    "firefoxProject": "npx playwright test --project=firefox",
+    "webkitProject": "npx playwright test --project=webkit"
+
+    
+  },
   "keywords": [],
   "type": "commonjs",
   "devDependencies": {
