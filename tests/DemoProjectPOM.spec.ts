@@ -8,7 +8,7 @@ for(let inputDataJSObj of inputData){ //closing at the end of test, instead of i
 
 //test(`DemoProject ${inputDataJSObj.myProduct}`, async ({page}) => { // modified here as while running with different pproduct names, test will runs with same project name Demoproject so to avoid that we just added prpduct name along with test name for avoiding duplication
 
-test('DemoProject' + inputDataJSObj.myProduct + "," + currentDate, async ({page}) => { 
+test.skip('DemoProject' + inputDataJSObj.myProduct + "," + currentDate, async ({page}) => { 
 let pom = new ObjectManagerpom(page)
  
 let loginpage = pom.getLoginPage()

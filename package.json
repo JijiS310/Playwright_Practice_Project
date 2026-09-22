@@ -10,7 +10,7 @@
     "config": "npx playwright test --config=playwright.config1.ts",
     "chromeProject": "npx playwright test --project=chromeProject",
     "firefoxProject": "npx playwright test --project=firefoxProject",
-    "webkitProject": "npx playwright test --project=webkit"
+    "webkit": "npx playwright test --project=webkit"
   },
   "keywords": [],
   "type": "commonjs",

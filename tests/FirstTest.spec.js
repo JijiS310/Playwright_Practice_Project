@@ -9,8 +9,8 @@ test('demo test',async ({browser})=>{   //for each test we need 'test' function,
 //test2
 test('demo test2',async ({page})=>{   //test.only gets prioritized and only that test will run. test.skip ==> skips that particular test
     await page.goto("https://www.google.com/")
-    //await page.pause()
+    
 })
-
+//await page.pause()
 //test.skip ==> to skip running that test
 //test.only ==> for running only that test
