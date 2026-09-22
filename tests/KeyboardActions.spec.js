@@ -1,6 +1,6 @@
 import test from "@playwright/test";
 
-test('KeyboardActions', async ({page}) => {
+test('@Login KeyboardActions', async ({page}) => {
     await page.goto("https://selenium.qabible.in/simple-form-demo.php")
     const inputbox1 = page.locator('#single-input-field')
     await inputbox1.focus()  // cursor gets focused here

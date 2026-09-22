@@ -10,7 +10,7 @@ incorrect password and username error visibility check
 
 import {test,expect} from "@playwright/test";
 //1)Empty Username and Password
-test('EmptyUserPass', async ({page}) => {
+test('@Login EmptyUserPass', async ({page}) => {
     await page.goto('https://www.saucedemo.com')
     const userName = await page.locator('#user-name').fill('')
     const passWord = await page.locator('#password').fill('')

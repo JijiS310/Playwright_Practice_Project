@@ -20,8 +20,8 @@ export default defineConfig({
   },
 
   retries:1, //retries 1 time upon failure
-  workers:1,  //chrome is a worker, 2 allows parallel execution
-  fullyParallel:true, //parallel execution
+  //workers:1,  //chrome is a worker, 2 allows parallel execution
+  //fullyParallel:true, //parallel execution
 
 
   reporter: 'html',
