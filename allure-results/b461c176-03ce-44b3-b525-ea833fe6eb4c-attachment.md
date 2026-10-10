@@ -1,0 +1,38 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: API\Patch.spec.js >> Patch Partial update Booking
+- Location: tests\API\Patch.spec.js:2:1
+
+# Error details
+
+```
+SyntaxError: Unexpected token 'F', "Forbidden" is not valid JSON
+```
+
+# Test source
+
+```ts
+  1  | import {test,expect} from '@playwright/test'
+  2  | test('Patch Partial update Booking', async ({request}) => {
+  3  |     const updateDetails = {
+  4  |     "firstname" : "Jiji",
+  5  |     "lastname" : "Rej"
+  6  | }
+  7  |     const response = await request.patch('https://restful-booker.herokuapp.com/booking/3433', {headers : {'Content-Type':'application/json', 'Cookie' : 'token = 3914df30cb4c49c', 'Accept':'application/json'},data : updateDetails})
+  8  |     const statusCode = await response.status()
+> 9  |     const responseJson = await response.json()
+     |                          ^ SyntaxError: Unexpected token 'F', "Forbidden" is not valid JSON
+  10 |     console.log(statusCode)
+  11 |     console.log(responseJson)
+  12 |     expect(responseJson.firstname).toBe(updateDetails.firstname)
+  13 |     expect(responseJson.lastname).toBe(updateDetails.lastname)
+  14 |     expect(statusCode).not.toBeNull()
+  15 |     
+  16 | })
+```

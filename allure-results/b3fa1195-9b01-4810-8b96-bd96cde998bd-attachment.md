@@ -1,0 +1,31 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: API\Delete.spec.js >> Delete Booking
+- Location: tests\API\Delete.spec.js:2:1
+
+# Error details
+
+```
+SyntaxError: Unexpected token 'M', "Method Not Allowed" is not valid JSON
+```
+
+# Test source
+
+```ts
+  1 | import {test,expect} from '@playwright/test'
+  2 | test('Delete Booking', async({request}) => {
+  3 |     const response = await request.delete('https://restful-booker.herokuapp.com/booking/4419', {headers :  {'Content-Type':'application/json', 'Cookie' : 'token = c98df0b6de6da93'}})
+  4 |     const statusCode =  response.status()
+  5 |     console.log(statusCode)
+> 6 |     const responseJson = await response.json()
+    |                          ^ SyntaxError: Unexpected token 'M', "Method Not Allowed" is not valid JSON
+  7 |     console.log(responseJson)
+  8 |     expect(statusCode).toBe(201)
+  9 | })
+```

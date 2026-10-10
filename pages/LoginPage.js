@@ -4,7 +4,6 @@ export class LoginPage{
         this.userName = page.locator('#user-name')
         this.passWord = page.locator('#password')
         this.loginBtn = page.locator('#login-button')
-
     }
     async gotoPage(){
         await this.page.goto('https://www.saucedemo.com')

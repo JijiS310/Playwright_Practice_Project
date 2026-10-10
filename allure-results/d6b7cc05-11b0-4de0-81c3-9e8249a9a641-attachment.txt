@@ -1,0 +1,5 @@
+getByLabel('Click on this check box')
+true
+true
+true
+Radio button 'Female' is checked

@@ -1,8 +1,8 @@
-import { CartPage } from "./CartPage"
-import { CheckoutPage } from "./CheckoutPage"
-import { LoginPage } from "./LoginPage"
-import { OrderConfirmPage } from "./OrderConfirmPage"
-import { ProductPage } from "./ProductPage"
+import { CartPage } from "./CartPage.js"
+import { CheckoutPage } from "./CheckoutPage.js"
+import { LoginPage } from "./LoginPage.js"
+import { OrderConfirmPage } from "./OrderConfirmPage.js"
+import { ProductPage } from "./ProductPage.js"
 
 export class ObjectManagerpom {
     constructor(page){

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "npx playwright test",
     "headed": "npx playwright test --headed",
@@ -10,15 +11,20 @@
     "config": "npx playwright test --config=playwright.config1.ts",
     "chromeProject": "npx playwright test --project=chromeProject",
     "firefoxProject": "npx playwright test --project=firefoxProject",
-    "webkit": "npx playwright test --project=webkit"
+    "webkit": "npx playwright test --project=webkit",
+    "allureReportGenerate": "npx allure generate allure-results ",
+    "allureReportOpen": "npx allure open allure-report",
+    "allure": "npx playwright test && npx allure generate allure-results && npx allure open allure-report && npx allure open"
   },
   "keywords": [],
-  "type": "commonjs",
+  
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.1.2"
+    "@types/node": "^26.1.2",
+    "allure-playwright": "^3.12.2"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^13.2.1",
     "exceljs": "^3.10.0"
   }
 }

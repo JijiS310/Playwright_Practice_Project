@@ -1,0 +1,39 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: LoginScenarios.spec.js >> @Login EmptyUserPass
+- Location: tests\LoginScenarios.spec.js:13:5
+
+# Error details
+
+```
+Test timeout of 40000ms exceeded.
+```
+
+```
+Tearing down "context" exceeded the test timeout of 40000ms.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]: Swag Labs
+  - main [ref=e5]:
+    - form "Login" [ref=e9]:
+      - textbox "Username" [ref=e11]
+      - textbox "Password" [active] [ref=e13]
+      - button "Login" [ref=e15] [cursor=pointer]
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "Accepted usernames are:" [level=4] [ref=e19]
+        - text: standard_userlocked_out_userproblem_userperformance_glitch_usererror_uservisual_user
+      - generic [ref=e20]:
+        - heading "Password for all users:" [level=4] [ref=e21]
+        - text: secret_sauce
+```

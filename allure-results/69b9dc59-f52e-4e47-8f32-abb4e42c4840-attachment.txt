@@ -1,0 +1,3 @@
+Run before each test
+Second normal test
+Run after each test cases
