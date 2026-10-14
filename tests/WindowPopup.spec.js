@@ -10,13 +10,13 @@ test('windowPopup', async ({page})=>{
 
     const facebookButton = await page.locator('.btn.btn-primary.windowSingle')
     console.log(await page.title())     //extracts title of the page
-
+    //popup or tab or window - 'page.waitForEvent('eventName)'
     //new window
     const [newPage] = await Promise.all([   //promise.all takes multiple tasks thus accepts in as an array
         page.waitForEvent('popup'),        //waiting for new page
         facebookButton.click()
     ]) 
-    await page.waitForLoadState()       //while moving from one page to new page waiting to load the new page
+    await page.waitForLoadState()       //while moving from one page to new page waiting to load the new page //race condition
     console.log(await newPage.title())  //title of new page we need to mention that page name.title()
 
     await newPage.getByLabel('Email address or phone number').fill('abcd@gmail.com')

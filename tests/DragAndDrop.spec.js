@@ -1,6 +1,6 @@
 import test, { expect } from "@playwright/test";
 
-test('windowPopup', async ({page})=>{
+test('dragDrop', async ({page})=>{
     await page.goto('https://selenium.qabible.in/index.php')
 
     await page.locator('#others').click()

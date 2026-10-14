@@ -1,0 +1,88 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Screenshot.spec.js >> VisualTesting
+- Location: tests\Screenshot.spec.js:12:1
+
+# Error details
+
+```
+Error: A snapshot doesn't exist at D:\Jiji\Automation\Playwright\tests\Screenshot.spec.js-snapshots\screenshot-Homepage1-webkit-win32.png, writing actual.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link [ref=e8]:
+      - /url: index.php
+      - img "logo" [ref=e9]
+    - navigation [ref=e14]:
+      - list [ref=e16]:
+        - listitem [ref=e17]:
+          - link "Home" [ref=e18]:
+            - /url: index.php
+        - listitem [ref=e19]:
+          - link "Input Form" [ref=e20]:
+            - /url: simple-form-demo.php
+        - listitem [ref=e21]:
+          - link "Date Pickers" [ref=e22]:
+            - /url: date-picker.php
+        - listitem [ref=e23]:
+          - link "Table" [ref=e24]:
+            - /url: table-pagination.php
+        - listitem [ref=e25]:
+          - link "Progress Bars" [ref=e26]:
+            - /url: jquery-progress-bar.php
+        - listitem [ref=e27]:
+          - link "Alerts and Modals" [ref=e28]:
+            - /url: bootstrap-alert.php
+        - listitem [ref=e29]:
+          - link "List Box" [ref=e30]:
+            - /url: bootstrap-dual-list.php
+        - listitem [ref=e31]:
+          - link "Others" [ref=e32]:
+            - /url: drag-drop.php
+  - generic [ref=e37]:
+    - list [ref=e38]:
+      - listitem [ref=e39] [cursor=pointer]
+      - listitem [ref=e40] [cursor=pointer]
+      - listitem [ref=e41] [cursor=pointer]
+      - listitem [ref=e42] [cursor=pointer]
+    - generic [ref=e44]:
+      - img "Bootstrap 4 slider with text animation" [ref=e45]
+      - generic [ref=e46]:
+        - heading "Free Download" [level=3] [ref=e47]
+        - heading "Bootstrap 4 slider with text animation" [level=3] [ref=e48]
+    - button "Previous" [ref=e49] [cursor=pointer]
+    - button "Next" [ref=e52] [cursor=pointer]
+  - contentinfo [ref=e55]:
+    - paragraph [ref=e58]: © 2021 Obsqura Testing, All Rights Reserved.
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect} from '@playwright/test'
+  2  | test('Screenshot', async ({page}) => {
+  3  | 
+  4  |     await page.goto('https://selenium.qabible.in/index.php')
+  5  |     //page level screenshot
+  6  |     await page.screenshot({path: 'screenshot/Homepage.png',fullPage:true}) //screenshot folder creates and image of
+  7  |     const alertButton = page.locator('#alert-modal')
+  8  |     await alertButton.screenshot({path: 'screenshot/LoginButton.png'})
+  9  | 
+  10 | })
+  11 | 
+  12 | test('VisualTesting',async({page}) =>{
+  13 |     await page.goto('https://selenium.qabible.in/index.php')
+> 14 |     await expect(page).toHaveScreenshot('screenshot/Homepage1.png')
+     |     ^ Error: A snapshot doesn't exist at D:\Jiji\Automation\Playwright\tests\Screenshot.spec.js-snapshots\screenshot-Homepage1-webkit-win32.png, writing actual.
+  15 | })
+```

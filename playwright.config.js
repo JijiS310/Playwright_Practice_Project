@@ -19,15 +19,16 @@ export default defineConfig({
     timeout: 50*1000 
   },
 
-  retries:1, //retries 1 time upon failure
-  //workers:1,  //chrome is a worker, 2 allows parallel execution
+  //retries:1, //retries 1 time upon failure
+  workers:1,  //chrome is a worker, 2 allows parallel execution
   //fullyParallel:true, //parallel execution
 
 
-  //reporter: 'html',
-  reporter:[
-    ['allure-playwright']
-  ],
+  reporter: 'html',
+  // reporter:[
+  //   //['allure-playwright']
+    
+  // ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   
 
@@ -41,31 +42,35 @@ export default defineConfig({
     headless: false,
     screenshot:'only-on-failure',
     video:'retain-on-failure',
-    trace:'retain-on-failure'
+    trace:'retain-on-failure',
+    ignoreHTTPsErrors:true,    //SSLCertificate handling
+    permissions:['geolocation','camera','microphone','notifications'],
+    //geolocation:{latitute:29.45,longitude:24.76},
+    //viewport:{width:500,height:500}
   },
   },
-{
-  name:'firefoxProject', //ourchoice name
-    use: {
-      browserName:'firefox',
-    headless: false,
-    screenshot:'only-on-failure',
-    video:'retain-on-failure',
-    trace:'retain-on-failure'
-}
-},
-{
+// {
+//   name:'firefoxProject', //ourchoice name
+//     use: {
+//       browserName:'firefox',
+//     headless: false,
+//     screenshot:'only-on-failure',
+//     video:'retain-on-failure',
+//     trace:'retain-on-failure'
+// }
+// },
+// {
   
-    name:'webkit',
-    use: {
-      browserName:'webkit',
-    headless: false,
-    screenshot:'only-on-failure',
-    video:'retain-on-failure',
-    trace:'retain-on-failure'
+//     name:'webkit',
+//     use: {
+//       browserName:'webkit',
+//     headless: false,
+//     screenshot:'only-on-failure',
+//     video:'retain-on-failure',
+//     trace:'retain-on-failure'
   
-}
-}
+// }
+// }
 ]
 
   /* Run your local dev server before starting the tests */

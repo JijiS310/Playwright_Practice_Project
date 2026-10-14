@@ -1,3 +1,4 @@
+@smoke
 Feature: Ecommerce testing
 
   Scenario: Order a product from the ecommerce website

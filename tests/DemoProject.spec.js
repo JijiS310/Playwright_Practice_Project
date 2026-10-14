@@ -4,7 +4,7 @@ import {myTest} from "../utils/CustomFunction.js"
 import {customLocators} from  "../utils/CustomTypesTest.js"
 
 test.skip('DemoProject', async ({page}) => {
-await page.goto('https://www.saucedemo.com')
+await page.goto('https://www.saucedemo.com',{waitUntil:'networkidle'}) //race condition
 
 const userName = await page.locator('#user-name').fill('standard_user')
 const passWord = await page.locator('#password').fill('secret_sauce')

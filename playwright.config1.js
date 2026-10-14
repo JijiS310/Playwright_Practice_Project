@@ -42,7 +42,7 @@ export default defineConfig({
     ...devices['iPhone 12 Mini'],
     permissions:['geolocation','camera','microphone' ],
   // geolocation:{latitute:9.45,longitude:4.76},
-  ignoreHTTPsErrors:true
+  ignoreHTTPsErrors:true    //SSLCertificate handling
    
   },
   },

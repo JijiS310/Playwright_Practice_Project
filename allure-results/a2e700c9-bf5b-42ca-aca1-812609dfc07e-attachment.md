@@ -1,0 +1,67 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Screenshot.spec.js >> Screenshot
+- Location: tests\Screenshot.spec.js:2:1
+
+# Error details
+
+```
+Test timeout of 40000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link [ref=e8] [cursor=pointer]:
+      - /url: index.php
+      - img "logo" [ref=e9]
+    - navigation [ref=e14]:
+      - list [ref=e16]:
+        - listitem [ref=e17]:
+          - link "Home" [ref=e18] [cursor=pointer]:
+            - /url: index.php
+        - listitem [ref=e19]:
+          - link "Input Form" [ref=e20] [cursor=pointer]:
+            - /url: simple-form-demo.php
+        - listitem [ref=e21]:
+          - link "Date Pickers" [ref=e22] [cursor=pointer]:
+            - /url: date-picker.php
+        - listitem [ref=e23]:
+          - link "Table" [ref=e24] [cursor=pointer]:
+            - /url: table-pagination.php
+        - listitem [ref=e25]:
+          - link "Progress Bars" [ref=e26] [cursor=pointer]:
+            - /url: jquery-progress-bar.php
+        - listitem [ref=e27]:
+          - link "Alerts and Modals" [ref=e28] [cursor=pointer]:
+            - /url: bootstrap-alert.php
+        - listitem [ref=e29]:
+          - link "List Box" [ref=e30] [cursor=pointer]:
+            - /url: bootstrap-dual-list.php
+        - listitem [ref=e31]:
+          - link "Others" [ref=e32] [cursor=pointer]:
+            - /url: drag-drop.php
+  - generic [ref=e37]:
+    - list [ref=e38]:
+      - listitem [ref=e39] [cursor=pointer]
+      - listitem [ref=e40] [cursor=pointer]
+      - listitem [ref=e41] [cursor=pointer]
+      - listitem [ref=e42] [cursor=pointer]
+    - generic [ref=e44]:
+      - img "Bootstrap 4 slider with text animation" [ref=e45]
+      - generic [ref=e46]:
+        - heading "Free Download" [level=3] [ref=e47]
+        - heading "Bootstrap 4 slider with text animation" [level=3] [ref=e48]
+    - button "Previous" [ref=e49] [cursor=pointer]
+    - button "Next" [ref=e52] [cursor=pointer]
+  - contentinfo [ref=e55]:
+    - paragraph [ref=e58]: © 2021 Obsqura Testing, All Rights Reserved.
+```
